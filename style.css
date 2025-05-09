@@ -1,0 +1,161 @@
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    background: #f9f9f9;
+    padding-top: 56px; 
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #15a410; 
+    border-bottom: 2px solid;
+    transition: background-color 0.3s ease, border-bottom-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    color: white;
+    box-shadow: 0 2px 4px rgba(161, 58, 58, 0.05);
+  }
+
+  nav.scrolled {
+    background: #16293c; 
+    border-bottom-color: #e67e22;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  }
+
+  nav .logo {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #e4e4e4;
+    user-select: none;
+    flex-shrink: 0;
+  }
+
+  nav.scrolled .logo {
+    color: #e67e22;
+  }
+
+  ul.menu {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin-left: auto;
+  }
+
+  ul.menu li a {
+    text-decoration: none;
+    font-size: 1rem;
+    color: #cbcdcf;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+    display: inline-block;
+  }
+
+
+  ul.menu li a:hover,
+  ul.menu li a:focus {
+    background-color: #e67e22;
+    color: rgb(131, 126, 126);
+    outline: none;
+  }
+
+  nav.scrolled ul.menu li a {
+    color: #ecf0f1;
+  }
+
+  nav.scrolled ul.menu li a:hover,
+  nav.scrolled ul.menu li a:focus {
+    background-color: #f39c12;
+    color: #2c3e50;
+    font-family: 'Gill Sans';
+  }
+
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap:50px;
+    min-height: 600px;
+    padding: 40px 20px 20px 20px;
+    scroll-margin-top: 56px; 
+  }
+  
+
+  #home {
+    background: #f1c40f22;
+  }
+
+  #about {
+    background: #e67e2277;
+  }
+
+  #services {
+    background: #3498db44;
+  }
+
+  #portfolio {
+    background: #9b59b644;
+  }
+
+  #contact {
+    background: #1abc9c44;
+  }
+
+  section h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #2c3e50;
+  }
+
+  section p {
+    max-width: 600px;
+    font-size: 1.1rem;
+    color: #34495e;
+  }
+ 
+  @media (max-width: 600px) {
+    nav {
+      height: 50px;
+      padding: 0 12px;
+    }
+    nav .logo {
+      font-size: 1.1rem;
+    }
+    ul.menu {
+      gap: 1rem;
+    }
+    ul.menu li a {
+      font-size: 0.9rem;
+      padding: 6px 10px;
+    }
+    section {
+      padding: 30px 12px 12px 12px;
+    }
+    section h1 {
+      font-size: 1.5rem;
+    }
+    section p {
+      font-size: 1rem;
+    }
+  }
